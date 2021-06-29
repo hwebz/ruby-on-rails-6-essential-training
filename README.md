@@ -11,3 +11,5 @@
 > sudo docker-compose up
 
 > sudo docker-compose run web rake db:create
+
+> sudo docker-compose run web rails generate controller Demo index

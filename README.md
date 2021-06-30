@@ -17,3 +17,5 @@
 > sudo docker exec -it <container_id> rails generate migration DoNothingYet
 
 > sudo docker exec -it <container_id> rails generate model User first_name:string last_name:string email:string
+
+> sudo docker exec -it <container_id> rails db:migrate

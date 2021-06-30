@@ -23,3 +23,32 @@
 > sudo docker exec -it <container_id> rails db:migrate
 > sudo docker exec -it <container_id> rails db:migrate VERSION=<schedtimestamp> (VERSION=0 for revert back)
 > sudo docker exec -it <container_id> rails db:migrate:status
+
+> sudo docker exec -it <container_id> rails console (Interactive Ruby Console)
+
+`
+    // Create
+    subject = Subject.new
+    subject.name = 'Math'
+    subject.save
+
+    // Update
+    subject = Subject.find(1)
+    subject.name = 'Updated Math'
+    subject.update
+
+    // Delete
+    subject = Subject.find(2)
+    subject.destroy
+
+    // Read
+    subjects = Subject.where(['name LIKE ?', 'Math').limit(10).offset(10)
+    subject = subjects.first
+
+    // Relational
+    subject.pages
+    subject.pages << page // Append page with page.subject_id = subject.id
+    subject.pages.delete(page)
+    subject.pages.empty?
+    subject.pages.size
+`

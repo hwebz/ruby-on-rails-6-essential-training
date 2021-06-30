@@ -12,4 +12,8 @@
 
 > sudo docker-compose run web rake db:create
 
-> sudo docker-compose run web rails generate controller Demo index
+> sudo docker exec -it <container_id> rails generate controller Demo index
+
+> sudo docker exec -it <container_id> rails generate migration DoNothingYet
+
+> sudo docker exec -it <container_id> rails generate model User first_name:string last_name:string email:string

@@ -1,1 +1,8 @@
 <h1>Hello World!</h1>
+
+<%= link_to('Hello page', {
+    :controller => 'demo',
+    :action => 'hello'
+}) %>
+<br />
+<%= link_to('Hello page 2', '/demo/hello') %>

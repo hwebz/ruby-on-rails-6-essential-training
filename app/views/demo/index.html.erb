@@ -6,3 +6,9 @@
 }) %>
 <br />
 <%= link_to('Hello page 2', '/demo/hello') %>
+<br />
+<%= link_to("Hello with parameters", {
+    :action => 'hello',
+    :page => 5,
+    :id => 20
+})%>

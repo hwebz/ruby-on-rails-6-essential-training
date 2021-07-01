@@ -20,6 +20,8 @@
 > sudo docker exec -it <container_id> rails generate model Subject name:string position:integer visible:boolean
 > sudo docker exec -it <container_id> rails generate model Page name:string permalink:string position:integer visible:boolean content:text
 
+> sudo docker exec -it <container_id> rails generate migration SubjectPageAssociation
+
 > sudo docker exec -it <container_id> rails db:migrate
 > sudo docker exec -it <container_id> rails db:migrate VERSION=<schedtimestamp> (VERSION=0 for revert back)
 > sudo docker exec -it <container_id> rails db:migrate:status

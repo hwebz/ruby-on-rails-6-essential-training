@@ -25,8 +25,7 @@
 > sudo docker exec -it <container_id> rails db:migrate:status
 
 > sudo docker exec -it <container_id> rails console (Interactive Ruby Console)
-
-`
+    
     // Create
     subject = Subject.new
     subject.name = 'Math'
@@ -51,4 +50,6 @@
     subject.pages.delete(page)
     subject.pages.empty?
     subject.pages.size
-`
+
+> sudo docker exec -it <container_id> rails generate controller Subjects index show new edit delete
+> sudo docker exec -it <container_id> rails generate controller Pages index show new edit delete

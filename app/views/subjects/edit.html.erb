@@ -4,20 +4,7 @@
     <h2>Edit Subject</h2>
 
     <%= form_for(@subject) do |f| %>
-        <table summary="Subject form fields">
-            <tr>
-                <td>Name</td>
-                <td><%= f.text_field(:name) %></td>
-            </tr>
-            <tr>
-                <td>Position</td>
-                <td><%= f.text_field(:position) %></td>
-            </tr>
-            <tr>
-                <td>Visible</td>
-                <td><%= f.text_field(:visible) %></td>
-            </tr>
-        </table> 
+        <%= render(:partial => 'form', :locals => {:f => f}) %>
 
         <div class="form-buttons">
             <%= f.submit("Update Subject") %>

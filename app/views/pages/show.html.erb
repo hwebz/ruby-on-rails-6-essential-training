@@ -1,2 +1,36 @@
-<h1>Pages#show</h1>
-<p>Find me in app/views/pages/show.html.erb</p>
+<%= link_to("<< Back to List", pages_path, :class => 'back-link') %>
+
+<div class="pages show">
+    <h2>Show Page</h2>
+
+    <table summary="Subject detail view">
+        <tr>
+            <td>Subject Name</td>
+            <td><%= @page.subject.name %></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><%= @page.name %></td>
+        </tr>
+        <tr>
+            <td>Position</td>
+            <td><%= @page.position %></td>
+        </tr>
+        <tr>
+            <td>Visible?</td>
+            <td><%= @page.visible ? 'Yes' : 'No' %></td>
+        </tr>
+        <tr>
+            <td>Content</td>
+            <td><%= @page.content %></td>
+        </tr>
+        <tr>
+            <td>Created</td>
+            <td><%= @page.created_at %></td>
+        </tr>
+        <tr>
+            <td>Updated</td>
+            <td><%= @page.updated_at %></td>
+        </tr>
+    </table>
+</div>
